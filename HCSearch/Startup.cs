@@ -50,6 +50,7 @@ namespace HCSearch
             personInfoContext.EnsureSeedDataForContext();
 
             app.UseMvc(); // add MVC to the pipeline
+            app.UseDefaultFiles();
             app.UseStaticFiles();
 
             //app.Run((context) =>
