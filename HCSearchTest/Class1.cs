@@ -1,4 +1,8 @@
-﻿using System;
+﻿using HCSearch.Controllers;
+using HCSearch.Models;
+using HCSearch.Services;
+using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,23 +10,27 @@ using Xunit;
 
 namespace HCSearchTest
 {
-    public class Class1
+    public class PersonControllerTest
     {
-        [Fact]
-        public void PassingTest()
+        PeopleController controller = new PeopleController(new InMemoryPersonData());
+        IEnumerable<PersonDto> everyone;
+
+        public PersonControllerTest()
         {
-            Assert.Equal(4, Add(2, 2));
+            everyone = ((ObjectResult)controller.GetAll()).Value as IEnumerable<PersonDto>;
+        }
+        
+        [Fact]
+        public void GetAllPeopleTest()
+        {
+            Assert.Equal(3, everyone.Count());
         }
 
         [Fact]
-        public void FailingTest()
+        public void GetOneSearchTest()
         {
-            Assert.Equal(5, Add(2, 2));
-        }
-
-        int Add(int x, int y)
-        {
-            return x + y;
+            var one = ((ObjectResult)controller.Search("Joe")).Value as IEnumerable<PersonDto>;
+            Assert.Equal(1, one.Count());
         }
     }
 }
