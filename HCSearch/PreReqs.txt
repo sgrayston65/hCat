@@ -1,1 +1,5 @@
-﻿
+﻿.NET Core instruction Guide https://www.microsoft.com/net/core#windowsvs2015
+
+1. Requires Visual Studio 2015 Update 3 
+2. Install .NET Core 1.0.1 Tools Preview
+3. Install .NET Core 1.1 SDK https://www.microsoft.com/net/download/core#/current
