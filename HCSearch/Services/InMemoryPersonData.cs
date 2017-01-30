@@ -60,8 +60,8 @@ namespace HCSearch.Services
 
         public IEnumerable<PersonDto> GetByNameFragment(string fragment)
         {
-            return _persons.FindAll(p => p.Firstname.ToUpperInvariant().Contains(fragment.ToUpperInvariant()) 
-                                        || p.Lastname.ToUpperInvariant().Contains(fragment.ToUpperInvariant()));
+            return _persons.FindAll(p => string.Concat(p.Firstname.ToUpperInvariant(), p.Lastname.ToUpperInvariant())
+            .Replace(" ", string.Empty).Contains(fragment.Replace(" ", string.Empty).ToUpperInvariant()));
         }
     }
 }

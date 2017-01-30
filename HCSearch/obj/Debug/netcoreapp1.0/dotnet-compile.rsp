@@ -187,6 +187,8 @@ C:\Repos\hCat\HCSearch\Controllers\DummyController.cs
 C:\Repos\hCat\HCSearch\Controllers\PeopleController.cs
 C:\Repos\hCat\HCSearch\Migrations\20170128060355_PersonInfoInitialMigration.cs
 C:\Repos\hCat\HCSearch\Migrations\20170128060355_PersonInfoInitialMigration.Designer.cs
+C:\Repos\hCat\HCSearch\Migrations\20170130225211_AddedSearchName.cs
+C:\Repos\hCat\HCSearch\Migrations\20170130225211_AddedSearchName.Designer.cs
 C:\Repos\hCat\HCSearch\Migrations\PersonInfoContextModelSnapshot.cs
 C:\Repos\hCat\HCSearch\Models\Interest.cs
 C:\Repos\hCat\HCSearch\Models\Person.cs

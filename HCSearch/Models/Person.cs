@@ -26,6 +26,20 @@ namespace HCSearch.Models
         [DataType(DataType.Date)]
         [DateRange("1800/01/01", "2100/01/01")]
         public DateTime Dob { get; set; }
+        public string Searchname { get; set; }
         public virtual ICollection<Interest> Interests { get; set; } = new List<Interest>();
+        public Person()
+        {
+
+        }
+        public Person(string firstname, string lastname, string address, DateTime dob, ICollection<Interest> interests)
+        {
+            Firstname = firstname;
+            Lastname = lastname;
+            Searchname = firstname.ToUpperInvariant() + lastname.ToUpperInvariant();
+            Address = address;
+            Dob = dob;
+            Interests = interests;
+        }
     }
 }

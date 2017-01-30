@@ -8,9 +8,10 @@ using HCSearch.Models;
 namespace HCSearch.Migrations
 {
     [DbContext(typeof(PersonInfoContext))]
-    partial class PersonInfoContextModelSnapshot : ModelSnapshot
+    [Migration("20170130225211_AddedSearchName")]
+    partial class AddedSearchName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.0-rtm-22752")

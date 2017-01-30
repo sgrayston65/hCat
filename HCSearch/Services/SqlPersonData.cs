@@ -50,8 +50,7 @@ namespace HCSearch.Services
             //                                || p.Lastname.ToUpperInvariant().Contains(fragment.ToUpperInvariant()));
 
             var people = from p in _dbContext.Persons.Include(p => p.Interests)
-                         where p.Firstname.ToUpperInvariant().Contains(fragment.ToUpperInvariant())
-                         || p.Lastname.ToUpperInvariant().Contains(fragment.ToUpperInvariant())
+                         where p.Searchname.ToUpperInvariant().Contains(fragment.Replace(" ", string.Empty ).ToUpperInvariant())
                          select new PersonDto()
                          {
                              Firstname = p.Firstname,
