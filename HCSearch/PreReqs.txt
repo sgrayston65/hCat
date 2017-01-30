@@ -3,3 +3,7 @@
 1. Requires Visual Studio 2015 Update 3 
 2. Install .NET Core 1.0.1 Tools Preview
 3. Install .NET Core 1.1 SDK https://www.microsoft.com/net/download/core#/current
+
+appSettings.json contains settings for:
+a. Database connection string
+b. Search delay value in milliseconds
